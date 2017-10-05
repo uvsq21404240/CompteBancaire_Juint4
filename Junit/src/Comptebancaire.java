@@ -4,7 +4,10 @@ public class Comptebancaire {
 	private int solde ;
 	public Comptebancaire(int s)
 	{
+		
+		if (s>0)
 		this.solde = s;
+		else throw new IllegalArgumentException();
 	}
 	
 	public int getsolde()

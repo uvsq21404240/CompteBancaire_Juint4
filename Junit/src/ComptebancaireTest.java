@@ -32,5 +32,11 @@ public class ComptebancaireTest {
 		assertEquals(c1.getsolde() , 20);
 		assertEquals(c2.getsolde() , 130);
 	}
-	
+	@Test(expected=IllegalArgumentException.class)
+	public void valeur_negative()
+	{
+		Comptebancaire c1 = new Comptebancaire(-50);
+	}
 }
+	
+
